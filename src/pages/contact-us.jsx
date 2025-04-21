@@ -9,9 +9,6 @@ import {} from "@fortawesome/free-solid-svg-icons";
 import { faLightbulb, faBarChart } from "@fortawesome/free-regular-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-import iconbadge from "../../public/assets/images/icon-image.jpeg";
-import minoritybadge from "../../public/assets/images/minorityownedbusiness.png";
-import laboratorybadge from "../../public/assets/images/laboratory-org.png";
 import { useState } from "react";
 import emailjs, { EmailJSResponseStatus } from "@emailjs/browser";
 

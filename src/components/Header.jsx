@@ -13,11 +13,30 @@ const DockComponent = dynamic(() =>
   import("react-dock").then((mod) => mod.Dock)
 );
 
-function Header() {
+function Header({ alwaysScrolled = false }) {
   const [isOpen, setOpen] = useState(false);
 
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  const handleScroll = () => {
+    // Change the value based on the scroll position
+    setIsScrolled(window.scrollY > 50);
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
-    <div className="flex py-1 items-center justify-between px-10 sticky top-0 z-50 bg-transparent">
+    <div
+      className={
+        `flex py-1 items-center justify-between px-10 sticky top-0 z-50` +
+        (isScrolled || alwaysScrolled ? " bg-white" : " bg-black text-white")
+      }
+    >
       <Link href="/">
         <div className="">
           <Image
@@ -33,26 +52,26 @@ function Header() {
       <div className="hidden md:flex space-x-5">
         <Link
           className="text-md text-slate-600 py-2 hover:text-slate-400 transition duration-500 rounded-md text-center"
-          href="/aboutus"
+          href="/about-us"
         >
           About Us
         </Link>
         <Link
           className="text-md text-slate-600 py-2 hover:text-slate-400 transition duration-500 rounded-md text-center"
-          href="/ourservices"
+          href="/solutions"
         >
-          Our Services
+          Services
         </Link>
 
         <Link
           className="text-md text-slate-600 py-2 hover:text-slate-400 transition duration-500 rounded-md text-center"
-          href="/contactus"
+          href="/contact-us"
         >
           Contact Us
         </Link>
       </div>
       <div className="md:hidden">
-        <Hamburger toggled={isOpen} toggle={setOpen} />
+        <Hamburger toggled={isOpen} toggle={setOpen} color="white" />
         <div className="mixed-chart">
           {typeof window !== "undefined" && (
             <DockComponent position="top" isVisible={isOpen} size={0.75}>
