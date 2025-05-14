@@ -472,8 +472,8 @@ export default function Home() {
               <Slider {...settingsSlider} className="homepage-custom-slider">
                 {sliderdata.map((slidedetails, index) => (
                   <div key={index} className="slide-item -z-10">
-                    <div className="flex flex-col-reverse lg:flex-row lg:items-center w-[100%] h-full items-start">
-                      <div className="md:h-[400px] md:w-[500px] lg:h-[500px] h-[300px] w-[500px] flex items-center justify-center text-white bg-black lg:w-[50%]">
+                    <div className="flex flex-col-reverse lg:flex-row-reverse lg:items-center w-[100%] h-full items-start">
+                      <div className="md:h-[400px] md:w-[500px] lg:h-[500px] h-[300px] w-[500px] flex items-center justify-center text-white bg-black lg:w-[55%]">
                         <Image
                           className="w-[100%] h-[100%]"
                           width={2000}
@@ -482,7 +482,7 @@ export default function Home() {
                           alt={slidedetails.description}
                         />
                       </div>
-                      <div className="md:h-[300px] md:w-[500px] w-[100%] h-[250px] bg-blue-900 text-white lg:h-[500px] lg:w-[50%] lg:p-10">
+                      <div className="md:h-[300px] md:w-[500px] w-[100%] h-[250px] bg-blue-900 text-white lg:h-[500px] lg:w-[45%] lg:p-10">
                         <div className="lg:mt-[15%] lg:px-[10%] text-center lg:text-left">
                           <h3 className="lg:text-[30px] text-[28px] my-4 font-semibold ">
                             {slidedetails.title}
@@ -532,21 +532,17 @@ export default function Home() {
               </AccordionHeader>
               <AccordionBody className="pt-0 text-base font-normal">
                 <div className="text-justify text-white">
-                  At CenifyIT, we specialize in creating dynamic, user-friendly,
-                  and visually stunning websites that help businesses grow
-                  online. From custom website design to full-stack web
-                  development, we craft digital experiences tailored to your
-                  unique needs. Our expertise spans modern technologies,
-                  responsive design, e-commerce solutions, and SEO-optimized
-                  performance. We don’t just build websites; we deliver powerful
-                  platforms that enhance your brand, engage your audience, and
-                  drive results.
+                  At CenifyIT, we create beautiful, easy-to-use websites and
+                  custom tools that help your business grow. From online stores
+                  to mobile-friendly designs, we build digital solutions
+                  tailored to your needs. Our platforms don’t just look
+                  great—they save you time, boost your revenue, and help you
+                  connect with your audience in a meaningful way.
                   <span className="hidden lg:inline">
-                    Our expertise spans modern technologies, responsive design,
-                    e-commerce solutions, and SEO-optimized performance. We
-                    don’t just build websites; we deliver powerful platforms
-                    that enhance your brand, engage your audience, and drive
-                    results.
+                    We use the latest tools to build websites that look great on
+                    any device, are easy to shop from, and help people find you
+                    online. Our goal is to create powerful platforms that grow
+                    your brand and bring real results.
                   </span>
                 </div>
               </AccordionBody>
@@ -568,19 +564,17 @@ export default function Home() {
               </AccordionHeader>
               <AccordionBody className="pt-0 text-base font-normal">
                 <div className="text-justify text-white">
-                  A professional web development agency brings expertise,
-                  creativity, and technical skill to the table, transforming
-                  your vision into a high-performing website. Unlike DIY
-                  platforms or templates, we build fully customized websites
-                  that are tailored to your brand’s identity and business goals.
+                  A professional web development agency turns your ideas into
+                  real results with the right mix of skill and creativity. In
+                  today’s market, every advantage counts. That’s why we build
+                  custom websites and tools that help you work smarter, save
+                  time, and get more done.
                   <span className="hidden lg:inline">
-                    Our team ensures your website is fast, secure,
-                    mobile-friendly, and optimized for search engines. Most
-                    importantly, we save you time and stress while providing
-                    ongoing support to keep your site up-to-date and competitive
-                    in an ever-changing digital world.
+                    We make sure your website is fast, secure, works great on
+                    phones, and shows up in search results. Best of all, we take
+                    the stress off your plate and offer ongoing support to keep
+                    everything running smoothly and up-to-date.
                   </span>
-                  .
                 </div>
               </AccordionBody>
             </Accordion>
@@ -636,7 +630,7 @@ export default function Home() {
               <AccordionBody className="pt-0 text-base font-normal">
                 <div className="text-justify text-white">
                   <span>
-                    The timeline for building your website depends on the
+                    The timeline for building your website/tool depends on the
                     project’s scope and complexity. A simple website may take
                     4–6 weeks, while more intricate custom solutions can take
                     8–12 weeks or longer. Our process includes detailed
